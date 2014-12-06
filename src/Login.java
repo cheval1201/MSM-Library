@@ -59,7 +59,7 @@ public class Login extends JPanel implements ActionListener{
 			return true;
 		}
 		else {
-			JOptionPane.showMessageDialog(this, "Login Faile!");
+			JOptionPane.showMessageDialog(this, "Login Failed!");
 			return false;
 		}
 	}

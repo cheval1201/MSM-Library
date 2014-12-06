@@ -53,7 +53,7 @@ public class Signup extends JPanel implements ActionListener{
 		okbt.addActionListener(this);
 		add(okbt);
 		
-		cancelbt = new JButton("로인화연으로 \n돌아가기");
+		cancelbt = new JButton("Go back\n to Main");
 		cancelbt.setBounds(400, 400, 150, 50);
 		cancelbt.setMargin(new Insets(0, 0, 0, 0));
 		cancelbt.addActionListener(this);
