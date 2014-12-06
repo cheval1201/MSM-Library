@@ -9,10 +9,11 @@ public class LMLayout extends JFrame implements ActionListener{
 	
 	protected Login LoginPanel;
 	protected Signup SignupPanel;
+	protected Search SearchPanel;
 	
-	protected JPanel mainPanel;
+	protected static JPanel mainPanel;
 	
-	protected CardLayout cl;	
+	protected static CardLayout cl;	
 	
 	public LMLayout(){
 		super("Library Managerment Program");
@@ -42,6 +43,13 @@ public class LMLayout extends JFrame implements ActionListener{
 		SignupPanel.okbt.addActionListener(this);
 		SignupPanel.cancelbt.addActionListener(this);
 		
+		//Search 화면-------------------------------------------
+		SearchPanel = new Search();
+		mainPanel.add(SearchPanel, "search");
+		
+		SearchPanel.searchbt.addActionListener(this);
+		//SearchPanel.cancelbt.addActionListener(this);
+		
 		
 		Container con=getContentPane();
 		con.add(mainPanel);
@@ -67,6 +75,9 @@ public class LMLayout extends JFrame implements ActionListener{
 		
 		if (o == SignupPanel.cancelbt)	
 			cl.show(mainPanel, "login");  
+		
+		if (o == SearchPanel.searchbt)	
+			SearchPanel.search(); 
 	}
 	
 	private final KeyListener textInputHander = new KeyListener(){

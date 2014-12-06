@@ -56,10 +56,12 @@ public class Login extends JPanel implements ActionListener{
 		
 		if (DB.SEARCH_LOGIN(id, pw) == true){
 			JOptionPane.showMessageDialog(this, "Login Success!");
+			LMLayout.cl.show(LMLayout.mainPanel,"search");
 			return true;
 		}
 		else {
 			JOptionPane.showMessageDialog(this, "Login Failed!");
+			LMLayout.cl.show(LMLayout.mainPanel,"search");
 			return false;
 		}
 	}
