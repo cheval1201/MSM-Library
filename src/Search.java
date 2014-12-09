@@ -8,7 +8,7 @@ public class Search extends JPanel implements ActionListener{
 	protected Database DB = new Database();
 	
 	protected JButton searchbt, addbookbt, rentstatebt;
-	private TextField  searchText;
+	private TextField  searchText, searchResult;
 	private JLabel searchLabel;
 	
 	protected Search() {
@@ -21,7 +21,7 @@ public class Search extends JPanel implements ActionListener{
 		add(searchLabel);
 		
 		searchText = new TextField("");
-		searchText.setBounds(100,85,470,20);
+		searchText.setBounds(120,85,450,20);
 		add(searchText);
 		
 		searchbt = new JButton("Search");
@@ -38,6 +38,10 @@ public class Search extends JPanel implements ActionListener{
 		rentstatebt.setBounds(555, 15, 150, 30);
 		rentstatebt.addActionListener(this);
 		add(rentstatebt);
+		
+		searchResult = new TextField("");
+		searchResult.setBounds(120,130,450,500);
+		add(searchResult);
 		
 		setVisible(true);
 	}

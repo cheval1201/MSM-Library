@@ -11,10 +11,10 @@ public class Database {
 		try {
 			Class.forName("org.gjt.mm.mysql.Driver").newInstance();
 			String url = "jdbc:mysql://localhost:3306/library";
-			String option = "?useUnicode = true&characterEncoding=KSC5601";
-			url = url + option;
+		//	String option = "?useUnicode = true&characterEncoding=KSC5601";
+		//	url = url + option;
 			
-			conn = DriverManager.getConnection(url, "root", "");
+			conn = DriverManager.getConnection(url, "root", "10112911201");
 			stat = conn.createStatement();
 		} catch (Exception e){
 			e.printStackTrace();
@@ -29,7 +29,9 @@ public class Database {
 
 		String sql = "INSERT INTO student (`idstudent`, `password`, `name`, `department`) VALUES ('"+id+"', '"+pw+"', '"+name+"', '"+department+"');";
 		stat.executeUpdate(sql);
-	} catch (Exception ex){}
+	} catch (Exception ex){
+		System.out.println("failed in inserting into db");
+	}
 	}
 	
 	public void DELETE(String name){
