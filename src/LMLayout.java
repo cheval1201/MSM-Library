@@ -10,6 +10,7 @@ public class LMLayout extends JFrame implements ActionListener{
 	protected Login LoginPanel;
 	protected Signup SignupPanel;
 	protected Search SearchPanel;
+	protected AddBook AddBookPanel;
 	
 	protected static JPanel mainPanel;
 	
