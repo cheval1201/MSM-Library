@@ -8,13 +8,14 @@ public class Signup extends JPanel implements ActionListener{
 	protected Database DB = new Database();
 	
 	protected JButton okbt, cancelbt;
-	private TextField  idText, pwText, nameText, departmentText;
+	private TextField  idText, nameText, departmentText;
 	private JLabel idLabel, pwLabel, nameLabel, departmentLabel;
+	private JPasswordField pwText;
 	
 	protected Signup() {
 		setSize(750,750);
 		setLayout(null);
-		setBackground(Color.YELLOW);
+		setBackground(Color.LIGHT_GRAY);
 	
 		idLabel = new JLabel("ID: ");
 		idLabel.setBounds(250,180, 40,25);
@@ -28,7 +29,7 @@ public class Signup extends JPanel implements ActionListener{
 		pwLabel.setBounds(250, 230, 40,25);
 		add(pwLabel);
 		
-		pwText = new TextField("");
+		pwText = new JPasswordField("");
 		pwText.setBounds(300,230,200,25);
 		add(pwText);
 		
@@ -80,12 +81,30 @@ public class Signup extends JPanel implements ActionListener{
 			return false;
 		}
 		
+		//Kiem tra xem input ID co phai la chu so hay ko
+		int x = 0;
+		
+	    try {
+	        x = Integer.parseInt(id);
+	    } catch (NumberFormatException nfe) {
+	    	JOptionPane.showMessageDialog(this, "ID는 0~9 숫차이어야 하고 길이는 7개 이상 숫차를 입력 하셔야힙나다!");
+	    	return false;
+	    }
+	    
+	  //Kiem tra xem input ID co dai hon 7 chu so hay ko?
+	    if (id.length() != 7){
+	    	JOptionPane.showMessageDialog(this, "ID는 0~9 숫차이어야 하고 길이는 학번의 7개  숫차를 입력 하셔야힙나다!");
+	    	return false;
+	    }
+			
+	    //Check 완료!!
 			DB.ADD_ID(id, pw, name, department);	
 			JOptionPane.showMessageDialog(this, "Congratulion! \nSignup Success!! ~(^0^)~");
 			clear();
 			return true;
 		
 	}
+	
 
 	@Override
 	public void actionPerformed(ActionEvent e) {

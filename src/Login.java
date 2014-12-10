@@ -8,13 +8,14 @@ public class Login extends JPanel implements ActionListener{
 	protected Database DB = new Database();
 	
 	protected JButton loginbt, signupbt;
-	private TextField  idText, pwText;
+	private TextField  idText;
+	private JPasswordField pwText;
 	private JLabel idLabel, pwLabel;
 	
 	protected Login() {
 		setSize(750,750);
 		setLayout(null);
-		setBackground(Color.PINK);
+		setBackground(Color.LIGHT_GRAY);
 	
 		idLabel = new JLabel("ID: ");
 		idLabel.setBounds(250, 285, 40,20);
@@ -28,7 +29,7 @@ public class Login extends JPanel implements ActionListener{
 		pwLabel.setBounds(250, 330, 40,20);
 		add(pwLabel);
 		
-		pwText = new TextField("");
+		pwText = new JPasswordField("");
 		pwText.setBounds(300,330,200,20);
 		add(pwText);
 		

@@ -11,10 +11,10 @@ public class Database {
 		try {
 			Class.forName("org.gjt.mm.mysql.Driver").newInstance();
 			String url = "jdbc:mysql://localhost:3306/library";
-		//	String option = "?useUnicode = true&characterEncoding=KSC5601";
-		//	url = url + option;
+			String option = "?useUnicode = true&characterEncoding=KSC5601";
+			url = url + option;
 			
-			conn = DriverManager.getConnection(url, "root", "10112911201");
+			conn = DriverManager.getConnection(url, "root", "");
 			stat = conn.createStatement();
 		} catch (Exception e){
 			e.printStackTrace();

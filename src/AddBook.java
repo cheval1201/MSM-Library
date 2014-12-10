@@ -14,7 +14,7 @@ public class AddBook extends JPanel implements ActionListener{
 	protected AddBook() {
 		setSize(750,750);
 		setLayout(null);
-		setBackground(Color.YELLOW);
+		setBackground(Color.LIGHT_GRAY);
 	
 		titleLabel = new JLabel("Title: ");
 		titleLabel.setBounds(250,180, 40,25);
