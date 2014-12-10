@@ -81,7 +81,7 @@ public class AddBook extends JPanel implements ActionListener{
 		}
 		
 			DB.ADD_ID(id, pw, name, department);	
-			JOptionPane.showMessageDialog(this, "Congratulion! \nSignup Success!! ~(^0^)~");
+			JOptionPane.showMessageDialog(this, "Congratulations! \nSignup Success!! ~(^0^)~");
 			clear();
 			return true;
 		
