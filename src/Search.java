@@ -21,26 +21,26 @@ public class Search extends JPanel implements ActionListener{
 		add(searchLabel);
 		
 		searchText = new TextField("");
-		searchText.setBounds(120,85,450,20);
+		searchText.setBounds(120,85,480,20);
 		add(searchText);
 		
 		searchbt = new JButton("Search");
-		searchbt.setBounds(585, 85, 100, 20);
+		searchbt.setBounds(610, 85, 80, 20);
 		searchbt.addActionListener(this);
 		add(searchbt);
 		
 		addbookbt = new JButton("Add new book");
-		addbookbt.setBounds(30, 15, 150, 30);
+		addbookbt.setBounds(120, 35, 150, 30);
 		addbookbt.addActionListener(this);
 		add(addbookbt);
 		
 		rentstatebt = new JButton("My rented books");
-		rentstatebt.setBounds(555, 15, 150, 30);
+		rentstatebt.setBounds(450, 35, 150, 30);
 		rentstatebt.addActionListener(this);
 		add(rentstatebt);
 		
 		searchResult = new TextField("");
-		searchResult.setBounds(120,130,450,500);
+		searchResult.setBounds(120,130,480,500);
 		add(searchResult);
 		
 		setVisible(true);
